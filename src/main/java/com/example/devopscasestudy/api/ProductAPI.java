@@ -28,20 +28,20 @@ public class ProductAPI {
 	@GetMapping("/products")
 	public ResponseEntity<List<Product>> findAll(){
 		List<Product> products=productRepository.findAll();
-		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		return new ResponseEntity<>(products, HttpStatus.OK);
 	}
 	
 	//https://localhost:8081/products/5674
 	@GetMapping("/products/{price}")
 	public ResponseEntity<List<Product>> findByPrice(@PathVariable("price")double price){
 		List<Product> products=productRepository.findByPriceGreaterThan(price);
-		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		return new ResponseEntity<>(products, HttpStatus.OK);
 	}
 	
 	@GetMapping("/products/find/{name}")
 	public ResponseEntity<List<Product>> findByName(@PathVariable("name")String name){
 		List<Product> products=productRepository.findByProductNameIgnoreCase(name);
-		return new ResponseEntity<List<Product>>(products, HttpStatus.OK);
+		return new ResponseEntity<>(products, HttpStatus.OK);
 	}
 	
 	//http://localhost:8081/products/5674
