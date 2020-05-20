@@ -147,6 +147,11 @@
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
+				
+				 <configuration>
+    <finalName>devopscasestudy-docker-jenkins</finalName>
+    
+  </configuration>
 			</plugin>
 			
 			<plugin>
