@@ -1,4 +1,4 @@
-package com.example.devopscasestudy.model;
+	package com.example.devopscasestudy.model;
 
 import javax.persistence.Entity;
 import javax.persistence.Id;
